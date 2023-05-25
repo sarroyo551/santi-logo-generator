@@ -26,7 +26,7 @@ inquirer
     }
   ])
   .then((answers) => {
-    console.log(answers)
+    // console.log(answers)
     let shape;
     if (answers.shape == 'Triangle') {
       shape = new Triangle()
@@ -40,6 +40,8 @@ inquirer
     shape.setTextColor(answers.text_color)
     shape.setText(answers.text)
     shape.setColor(answers.color)
+
+    
   })
   .catch((error) => {
     if (error.isTtyError) {
